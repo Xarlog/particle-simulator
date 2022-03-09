@@ -25,10 +25,13 @@ void interactions()
             force=force-vector3d<double>(f_r*dist.x/dist.sum(),f_r*dist.y/dist.sum(),f_r*dist.z/dist.sum());
         }
         part.accelerate(force,t);
-        part.motion(t);
         cout<<"F:"<<force.length()<<"\n";
         cout<<"Pos:"<<part.position.length()<<"\n";
         cout<<"v:"<<part.velocity.length()<<"\n";
+    }
+    for(auto& part:bus)
+    {
+        part.motion(t);
     }
 }
 void gl_init()
