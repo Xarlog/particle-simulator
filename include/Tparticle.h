@@ -10,8 +10,9 @@ class Tparticle
         double mass;
         double electric_charge;
         double repulsive_charge;
+        double attractive_charge;
         Tparticle();
-        Tparticle(vector3d<double> Position,vector3d<double>,double,double,double);
+        Tparticle(vector3d<double> Position,vector3d<double>,double,double,double,double);
         virtual ~Tparticle();
         void accelerate(vector3d<double> Force, double t)
         {
