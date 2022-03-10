@@ -7,6 +7,16 @@ using namespace std;
 
 vector<Tparticle> bus;
 const double t=0.0001;
+
+void draw_particles(const vector<Tparticle>* objects)
+{
+    for(auto& part:*objects)
+    {
+        glBegin(GL_POINTS);
+        glColor3d(1.0,0.0,1.0); glVertex3d(part.position.x,part.position.y,part.position.z);
+        glEnd();
+    }
+}
 void interactions()
 {
     for(auto& part:bus)
@@ -62,10 +72,5 @@ void gl_main()
 {
     interactions();
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glBegin(GL_POINTS);
-    glColor3d(1.0,0.0,1.0); glVertex3d(bus[0].position.x,bus[0].position.y,bus[0].position.z);
-    glColor3d(1.0,0.0,1.0); glVertex3d(bus[1].position.x,bus[1].position.y,bus[1].position.z);
-    glColor3d(1.0,0.0,1.0); glVertex3d(bus[2].position.x,bus[2].position.y,bus[2].position.z);
-    glEnd();
-
+    draw_particles(&bus);
 }
