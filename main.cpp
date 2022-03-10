@@ -13,7 +13,7 @@ void draw_particles(const vector<Tparticle>* objects)
     for(auto& part:*objects)
     {
         glBegin(GL_POINTS);
-        glColor3d(1.0,0.0,1.0); glVertex3d(part.position.x,part.position.y,part.position.z);
+        glColor3d(part.color.x,part.color.y,part.color.z); glVertex3d(part.position.x,part.position.y,part.position.z);
         glEnd();
     }
 }
