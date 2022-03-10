@@ -37,7 +37,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
     wcex.hCursor = LoadCursor(NULL, IDC_ARROW);
     wcex.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
     wcex.lpszMenuName = NULL;
-    wcex.lpszClassName = "Test App";
+    wcex.lpszClassName = "particle simulator";
     wcex.hIconSm = LoadIcon(NULL, IDI_APPLICATION);;
 
 
