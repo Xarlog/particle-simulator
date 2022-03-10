@@ -14,6 +14,7 @@ class vector3d
         T sum();
         virtual ~vector3d();
         T length();
+        T scalar_mult(vector3d<T>);
 
     protected:
 
@@ -47,6 +48,11 @@ T vector3d<T>::sum()
     return fabs(x)+fabs(y)+fabs(z);
 }
 
+template <class T>
+T vector3d::scalar_mult(vector3d<T> mult)
+{
+    return x*mult.x+y*mult.y+z*mult.z;
+}
 template <class T>
 vector3d<T>::~vector3d()
 {
