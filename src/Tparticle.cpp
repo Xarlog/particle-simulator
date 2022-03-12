@@ -8,6 +8,7 @@ Tparticle::Tparticle()
     electric_charge=0;
     repulsive_charge=1;
     attractive_charge=0;
+    color=vector3d(1,1,1);
 }
 Tparticle::Tparticle(vector3d<double> Position, vector3d<double> Velocity, double Mass, double Electric_charge, double Repulsive_charge, double Attractive_charge)
 {
@@ -17,6 +18,7 @@ Tparticle::Tparticle(vector3d<double> Position, vector3d<double> Velocity, doubl
     electric_charge=Electric_charge;
     repulsive_charge=Repulsive_charge;
     attractive_charge=Attractive_charge;
+    color=vector3d(1,1,1)
 }
 Tparticle::Tparticle(vector3d<double> Position, vector3d<double> Velocity, double Mass, double Electric_charge, double Repulsive_charge, double Attractive_charge, vector3d<double> Color)
 {
