@@ -49,7 +49,7 @@ T vector3d<T>::sum()
 }
 
 template <class T>
-T vector3d::scalar_mult(vector3d<T> mult)
+T vector3d<T>::scalar_mult(vector3d<T> mult)
 {
     return x*mult.x+y*mult.y+z*mult.z;
 }
