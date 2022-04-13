@@ -11,7 +11,7 @@ class Tparticle
         double electric_charge;
         double repulsive_charge;
         double attractive_charge;
-        vector3d<double> color:
+        vector3d<double> color;
         Tparticle();
         Tparticle(vector3d<double> Position,vector3d<double>,double,double,double,double);
         Tparticle(vector3d<double> Position,vector3d<double>,double,double,double,double,vector3d<double> Color);
