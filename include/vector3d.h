@@ -58,7 +58,7 @@ T vector3d<T>::scalar_mult(vector3d<T> mult)
 template <class T>
 void vector3d<T>::make_versor()
 {
-    double len=length();
+    T len=length();
     x=x/len;
     y=y/len;
     z=z/len;
