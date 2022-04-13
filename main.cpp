@@ -47,9 +47,6 @@ void interactions()
             force=force+vector3d<double>(f_a*dist.x/dist.sum(),f_a*dist.y/dist.sum(),f_a*dist.z/dist.sum());
         }
         part.accelerate(force,t);
-        cout<<"F:"<<force.length()<<"\n";
-        cout<<"Pos:"<<part.position.length()<<"\n";
-        cout<<"v:"<<part.velocity.length()<<"\n";
     }
     for(auto& part:bus)
     {
