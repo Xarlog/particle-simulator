@@ -15,6 +15,7 @@ class vector3d
         virtual ~vector3d();
         T length();
         T scalar_mult(vector3d<T>);
+        void make_versor();
 
     protected:
 
@@ -53,6 +54,16 @@ T vector3d<T>::scalar_mult(vector3d<T> mult)
 {
     return x*mult.x+y*mult.y+z*mult.z;
 }
+
+template <class T>
+void vector3d<T>::make_versor()
+{
+    double len=length();
+    x=x/len;
+    y=y/len;
+    z=z/len;
+}
+
 template <class T>
 vector3d<T>::~vector3d()
 {
