@@ -8,7 +8,7 @@ POINT GetCursorPosRelativeToWindow()
 {
     POINT p;
     GetCursorPos(&p);
-    ScreenToClient(FindWindowA("Test App",NULL),&p);
+    ScreenToClient(FindWindowA("particle simulator",NULL),&p);
     return p;
 }
 
@@ -37,7 +37,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
     wcex.hCursor = LoadCursor(NULL, IDC_ARROW);
     wcex.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
     wcex.lpszMenuName = NULL;
-    wcex.lpszClassName = "Test App";
+    wcex.lpszClassName = "particle simulator";
     wcex.hIconSm = LoadIcon(NULL, IDI_APPLICATION);;
 
 
@@ -46,8 +46,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
     /* create main window */
     hwnd = CreateWindowEx(0,
-                          "Test App",
-                          "New Game Attempt",
+                          "particle simulator",
+                          "particle simulator",
                           WS_OVERLAPPEDWINDOW,
                           CW_USEDEFAULT,
                           CW_USEDEFAULT,
