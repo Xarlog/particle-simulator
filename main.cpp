@@ -68,6 +68,14 @@ bool gl_msg(MSG& msg)
 void gl_main()
 {
     interactions();
+    glBegin(GL_LINES);
+    glColor3d(1.0,0.0,0.0): glVertex3d(1.0,0.0,0.0);
+    glColor3d(1.0,0.0,0.0): glVertex3d(1.0,0.0,0.0);
+    glColor3d(0.0,1.0,0.0): glVertex3d(0.0,0.0,1.0);
+    glColor3d(0.0,1.0,0.0): glVertex3d(0.0,0.0,1.0);
+    glColor3d(0.0,0.0,1.0): glVertex3d(0.0,1.0,0.0);
+    glColor3d(0.0,0.0,1.0): glVertex3d(0.0,1.0,0.0);
+    glEnd();
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     draw_particles(&bus);
 }
